@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'DashboardController@show');
 Route::get('/dashboard', 'DashboardController@show');
 // Route::get('/dashboard/analytics', 'DashboardController@showAnalytics');
 // Route::get('/dashboard/data', 'DashboardController@showData');
 
-// API endpoints
+// API endpoint
 Route::get('/api', 'ApiController@index');
 Route::post('/api/record', 'ApiController@store');
 Route::get('/api/record', 'ApiController@get');
